@@ -18,12 +18,12 @@ return new class extends Migration
             $table->string('Model', 45)->nullable();
             $table->string('LicensePlate', 10)->unique();
             $table->string('CarChassis', 25)->unique();
-            $table->string('Color', 20)->nullable();
-            $table->string('Left', 100)->nullable();
-            $table->string('Right', 100)->nullable();
-            $table->string('Front', 100)->nullable();
-            $table->string('Back', 100)->nullable();
-            $table->string('Up', 100)->nullable();
+            $table->longText('Color', 20)->nullable();
+            $table->longText('Left')->nullable();
+            $table->longText('Right')->nullable();
+            $table->longText('Front')->nullable();
+            $table->longText('Back')->nullable();
+            $table->longText('Up')->nullable();
             $table->bigInteger('CarBandId')->nullable();
             $table->bigInteger('CompanyId')->nullable();
             $table->bigInteger('PersonId')->nullable();

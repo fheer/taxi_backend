@@ -20,7 +20,7 @@ return new class extends Migration
             $table->string('OperatingLicense', 60)->nullable()->unique();
             $table->string('Address', 300)->nullable()->unique();
             $table->string('Phone', 60)->nullable()->unique();
-            $table->string('logo', 100)->nullable()->unique();
+            $table->longText('logo')->nullable()->unique();
             $table->softDeletes();
             $table->timestamps();
         });

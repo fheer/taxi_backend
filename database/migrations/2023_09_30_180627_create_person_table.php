@@ -23,7 +23,7 @@ return new class extends Migration
             $table->string('BloodType', 6)->nullable()->default('OR+');
             $table->string('CellPhone')->nullable();
             $table->string('Address', 200)->nullable();
-            $table->string('photo', 100)->nullable();
+            $table->longText('photo')->nullable();
             $table->bigInteger('CompanyId')->nullable();
             $table->foreign('CompanyId')->references('id')->on('company')->onDelete('cascade');
             $table->softDeletes();
