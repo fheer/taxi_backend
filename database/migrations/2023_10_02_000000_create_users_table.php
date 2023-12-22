@@ -19,7 +19,7 @@ return new class extends Migration
             $table->timestamp('email_verified_at')->nullable();
             $table->string('password');
             $table->string('rememberToken', 400)->nullable();
-            $table->tinyInteger('type', 2)->nullable();
+            $table->tinyInteger('type')->nullable();
             $table->bigInteger('person_id')->nullable();
             $table->foreign('person_id')->references('id')->on('person')->onDelete('cascade');
             $table->softDeletes();
